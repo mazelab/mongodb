@@ -551,6 +551,6 @@ exports.connect = function(config, intern, callback) {
   }
 
 
-  db = config.db || new MongoClient(mongoString, { useNewUrlParser: true });
+  db = config.db || new MongoClient;
   callback(null, new MongodbDriver(db, intern, mongoString));
 };
